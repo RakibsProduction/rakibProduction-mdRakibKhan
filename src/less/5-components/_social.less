@@ -1,0 +1,74 @@
+.social {
+  margin: 15px 0 30px;
+
+  a {
+    margin-right: 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    @media screen and (min-width: 769px) {
+      &:hover .hoverLayer {
+        bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    &#github {
+      border-bottom: 6px solid darken(@github, 10%);
+    }
+    &#twitter {
+      border-bottom: 6px solid darken(@twitter, 10%);
+    }
+    &#linkedIn {
+      border-bottom: 6px solid darken(@linkedin, 10%);
+    }
+    &#facebook {
+      border-bottom: 6px solid darken(@facebook, 10%);
+    }
+
+    .hoverLayer {
+      height: 57px;
+      width: 100px;
+      bottom: -57px;
+      z-index: 1;
+      position: absolute;
+      transition: all 0.5s ease;
+
+    }
+    .github {
+      background: @github;
+    }
+    .twitter {
+      background: @twitter;
+    }
+    .linkedIn {
+      background: @linkedin;
+    }
+    .facebook {
+      background: @facebook;
+    }
+
+    i {
+      height: 40px;
+      width: 100px;
+      padding: 11px 0 0;
+      z-index: 2;
+      position: relative;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
