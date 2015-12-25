@@ -189,7 +189,7 @@ module.exports = function(grunt) {
           spawn: false
         },
         files: ['src/js//*.js'],
-        tasks: ['jshint:beforeconcat', 'clean:js', 'concat', 'uglify', 'jshint:afterconcat']
+        tasks: ['jshint:beforeconcat', 'concat', 'uglify', 'jshint:afterconcat']
       }
     }
   });
