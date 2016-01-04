@@ -1,16 +1,28 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the about page.
-// -----------------------------------------------------------------------------
+.grid-example {
+  line-height: 40px;
 
+  [class*="col-md-"] {
+    margin-bottom: 20px;
 
-.example-grid .column, .example-grid .columns {
-  background: #EEE;
-  text-align: center;
-  line-height: 30px;
-  margin-bottom: 1.5rem;
+    border: 1px solid @gray-light;
+
+    &:first-child {
+      border-right: 0;
+    }
+  }
 }
+
+.typography {
+  h1 {
+    margin-top: 0;
+  }
+}
+
 .heading-font-size {
-    font-size: 1.2rem;
-    color: #999;
-    letter-spacing: normal;
+  font-size: 1.5rem;
+
+  letter-spacing: normal;
+
+  color: #999999;
 }
+
