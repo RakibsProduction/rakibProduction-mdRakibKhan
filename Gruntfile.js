@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     // clean each destination before output
     clean: {
       html: ["dist/index.html", "dist/pages/*.html"],
-      css: [BUILD_FILES_CSS, SRC_FILES_CSS],
+      css: [SRC_FILES_CSS],
       js : [BUILD_FILES_JS]
     },
 
@@ -196,7 +196,7 @@ module.exports = function(grunt) {
   });
 
   //Default Task(s)
-  grunt.registerTask('default', 'watch');
+  grunt.registerTask('default', ['includes', 'clean:css', 'cssflow', 'copy', 'watch']);
 
   grunt.registerTask('cleancss', ['uncss', 'cssmin:dist']);
 };
